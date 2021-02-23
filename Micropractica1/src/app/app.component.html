@@ -19,13 +19,19 @@
   <div class="pedido">
       <h1>Consumiciones</h1>
       <div class="titulos">
-        <h3><u>Producto</u></h3>
-        <h3 class="precio"><u>Precio</u></h3>
+        <div>
+          <h3><u>Producto</u></h3>
+          <p *ngFor='let linea of lineas; let i=index'>
+            {{linea[0]}}
+        </div>
+        <div class="precio">
+          <h3 ><u>Precio</u></h3>
+          <p *ngFor='let linea of lineas; let i=index'>
+            {{linea[1]}}
+          <button type='button' (click)='delLinea(i)'>-</button>
+          </p>
+        </div>
       </div>
-      <p *ngFor='let linea of lineas; let i=index'>
-        {{linea[0]}} {{linea[1]}}
-        <button type='button' (click)='delLinea(i)'>-</button>
-      </p>
       <h2>TOTAL</h2>
       <p>
         {{total | currency:'EUR':'symbol':'2.2-2':'es' }}

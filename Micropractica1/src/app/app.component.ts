@@ -12,7 +12,7 @@ export class AppComponent {
   public total:number = 0;
   public lineas:Array<[string,number]>=[];
   public cod_comand = 0;
-  public comanda:Array<[string,number]>=[['Cerdo agridulce',5.5],['Arroz tres delicias',3.5],['Ternera con bambu y setas',7]];
+  public comanda:Array<[string,number]>=[['Cerdo agridulce',5.5],['Arroz tres delicias',3.5],['Ternera con bambu y setas',7.0]];
 
   public addLinea(i: number)
   {
@@ -32,7 +32,7 @@ export class AppComponent {
       this.total -= 5.5;
     }else if(this.lineas[i][1] == 3.5){
       this.total -= 3.5;
-    }else if(this.lineas[i][1] == 7){
+    }else if(this.lineas[i][1] == 7.0){
       this.total -= 7;
   }
 }

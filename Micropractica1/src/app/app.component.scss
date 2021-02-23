@@ -1,6 +1,18 @@
-label{display:inline-block;}
 body{
     background-color: rgb(240, 125, 83);
+}
+p{
+  font-size: 20px;
+}
+h3{
+  font-size: 25px;
+}
+h1{
+  font-size: 30px;
+}
+label{
+  font-size: 20px;
+  display: inline-block;
 }
 #comanda{
     margin-left: 10px}
@@ -9,6 +21,7 @@ body{
 }
 .precio{
     margin-left: auto;
+    margin-right: 30px;
 }
 
 .titulos{
