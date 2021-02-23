@@ -1,28 +1,29 @@
 <body>
-<div style="text-align:center">
-  <h1>
-    {{ title }}
-  </h1>
-</div>
+  <div style="text-align:center">
+    <h1>
+      {{ title }}
+    </h1>
+  </div>
 
-<div class="main">
-    <label>Consumicion</label>
-    <select name="lst_comand" [(ngModel)]='cod_comand'>
-        <option *ngFor='let comanda of comanda' [value]='comanda[0]'>{{comanda[0]}}</option>
+  <div class="main">
     <label>Consumición:</label>
-    <button id="button" type='button' (click)='addLinea()'>+</button>
-</div>
-<br>
+    <select name="comanda" id="comanda" [(ngModel)]='cod_comand'>
+        <option *ngFor='let comanda of comanda; let i=index' [value]='comanda[1]'>{{comanda[0]}}</option>
+    </select>
+    <button id="button" type='button' (click)='addLinea(cod_comand)'>+</button>
+  </div>
+  <br>
 
-<div class="pedido">
-    <h1>Consumiciones</h1>
-    <div class="titulos">
-    <h3><u>Producto</u></h3>
-    <h3 class="precio"><u>Precio</u></h3>
-    </div>
-    <p *ngFor='let linea of lineas; let i=index'>
-      {{linea}}
-      <button type='button' (click)='delLinea(i)'>-</button>
-    </p>
-    <h2>TOTAL</h2>
-</div>
+  <div class="pedido">
+      <h1>Consumiciones</h1>
+      <div class="titulos">
+      <h3><u>Producto</u></h3>
+      <h3 class="precio"><u>Precio</u></h3>
+      </div>
+      <p *ngFor='let linea of lineas; let i=index'>
+        {{linea}}
+        <button type='button' (click)='delLinea(i)'>-</button>
+      </p>
+      <h2>TOTAL</h2>
+  </div>
+</body>

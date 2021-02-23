@@ -9,13 +9,13 @@ import { FormsModule } from '@angular/forms';
 export class AppComponent {
   title = 'COMANDA';
 
-  public lineas=[''];
+  public lineas:Array<[string,number]>=[];
   public cod_comand = 0;
   public comanda:Array<[string,number]>=[['cerdo',5.5],['arroz',3.5],['ternera',7]];
 
-  public addLinea()
+  public addLinea(i: number)
   {
-	  this.lineas.push('Ejemplo');
+	  this.lineas.push(this.comanda[i]);
   }
   
   public delLinea(i: number)
