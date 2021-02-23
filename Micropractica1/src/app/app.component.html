@@ -8,7 +8,7 @@
   <div class="main">
     <label>Consumición:</label>
     <select name="comanda" id="comanda" [(ngModel)]='cod_comand'>
-        <option *ngFor='let comanda of comanda; let i=index' [value]='comanda[1]'>{{comanda[0]}}</option>
+        <option *ngFor='let comanda of comanda' [value]='comanda[1]'>{{comanda[0]}}</option>
     </select>
     <button id="button1" type='button' *ngIf="cod_comand==5.5" (click)='addLinea(0)'>+</button>
     <button id="button2" type='button' *ngIf="cod_comand==3.5" (click)='addLinea(1)'>+</button>
@@ -23,9 +23,12 @@
         <h3 class="precio"><u>Precio</u></h3>
       </div>
       <p *ngFor='let linea of lineas; let i=index'>
-        {{linea}}
+        {{linea[0]}} {{linea[1]}}
         <button type='button' (click)='delLinea(i)'>-</button>
       </p>
       <h2>TOTAL</h2>
+      <p>
+        {{total | currency:'EUR':'symbol':'2.2-2':'es' }}
+      </p>
   </div>
 </body>
