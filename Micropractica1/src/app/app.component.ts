@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class AppComponent {
   title = 'COMANDA';
+  public aux:number = 0;
   public total:number = 0;
   public lineas:Array<[string,number]>=[];
   public cod_comand = 0;
@@ -16,13 +17,15 @@ export class AppComponent {
   public addLinea(i: number)
   {
 	  this.lineas.push(this.comanda[i]);
-    this.total += this.lineas[i][1];
-    console.log(this.comanda[i][1]);
-    console.log(this.total);
+    this.aux = this.comanda[i][1];
+    this.total += this.aux;
+
   }
   
   public delLinea(i: number)
   {
+    this.aux = this.comanda[i][1];
+    this.total -= this.aux;
 	  this.lineas.splice(i,1);
   }
 }
