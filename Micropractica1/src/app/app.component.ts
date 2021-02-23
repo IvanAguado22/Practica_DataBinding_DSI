@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Micropractica1';
 
-  public lineas=['Esto es una linea prueba'];
-  
+  public lineas=[''];
+  public cod_comand = 0;
+  public comanda:Array<[string,number]>=[['cerdo',5.5],['arroz',3.5],['ternera',7]];
+
   public addLinea()
   {
-	  this.lineas.push('Linea de ejemplo '+(this.lineas.length+1));
+	  this.lineas.push('Ejemplo');
   }
   
   public delLinea(i: number)

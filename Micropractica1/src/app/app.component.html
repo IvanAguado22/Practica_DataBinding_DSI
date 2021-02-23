@@ -7,20 +7,17 @@
 
 <div class="main">
     <label>Consumicion</label>
-    <select name="comanda" id="">
-        <option value="" selected>Elige una opción</option>
-        <option value="Cerdo">Cerdo agridulce</option>
-        <option value="Arroz">Arroz tres delicias</option>
-        <option value="Ternera">Ternera con bambu y setas</option>
+    <select name="lst_comand" [(ngModel)]='cod_comand'>
+        <option *ngFor='let comanda of comanda' [value]='comanda[0]'>{{comanda[0]}}</option>
     </select>
     <button type='button' (click)='addLinea()'>+</button>
 </div>
 <br>
+
 <div class="pedido">
     <h1>Consumiciones</h1>
     <p *ngFor='let linea of lineas; let i=index'>
-        <button type='button' (click)='delLinea(i)'>DEL</button>
-        {{linea}}
+      {{linea}}
+      <button type='button' (click)='delLinea(i)'>-</button>
     </p>
 </div>
-<router-outlet></router-outlet>
