@@ -10,15 +10,17 @@
     <select name="comanda" id="comanda" [(ngModel)]='cod_comand'>
         <option *ngFor='let comanda of comanda; let i=index' [value]='comanda[1]'>{{comanda[0]}}</option>
     </select>
-    <button id="button" type='button' (click)='addLinea(cod_comand)'>+</button>
+    <button id="button1" type='button' *ngIf="cod_comand==5.5" (click)='addLinea(0)'>+</button>
+    <button id="button2" type='button' *ngIf="cod_comand==3.5" (click)='addLinea(1)'>+</button>
+    <button id="button3" type='button' *ngIf="cod_comand==7" (click)='addLinea(2)'>+</button>
   </div>
   <br>
 
   <div class="pedido">
       <h1>Consumiciones</h1>
       <div class="titulos">
-      <h3><u>Producto</u></h3>
-      <h3 class="precio"><u>Precio</u></h3>
+        <h3><u>Producto</u></h3>
+        <h3 class="precio"><u>Precio</u></h3>
       </div>
       <p *ngFor='let linea of lineas; let i=index'>
         {{linea}}

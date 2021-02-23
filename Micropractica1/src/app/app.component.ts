@@ -11,7 +11,7 @@ export class AppComponent {
 
   public lineas:Array<[string,number]>=[];
   public cod_comand = 0;
-  public comanda:Array<[string,number]>=[['cerdo',5.5],['arroz',3.5],['ternera',7]];
+  public comanda:Array<[string,number]>=[['Cerdo agridulce',5.5],['Arroz tres delicias',3.5],['Ternera con bambu y setas',7]];
 
   public addLinea(i: number)
   {
