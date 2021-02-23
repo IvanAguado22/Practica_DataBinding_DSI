@@ -24,8 +24,16 @@ export class AppComponent {
   
   public delLinea(i: number)
   {
-    this.aux = this.comanda[i][1];
-    this.total -= this.aux;
+    this.restaTotal(i);
 	  this.lineas.splice(i,1);
   }
+  public restaTotal(i: number){
+    if (this.lineas[i][1] == 5.5){
+      this.total -= 5.5;
+    }else if(this.lineas[i][1] == 3.5){
+      this.total -= 3.5;
+    }else if(this.lineas[i][1] == 7){
+      this.total -= 7;
+  }
+}
 }
