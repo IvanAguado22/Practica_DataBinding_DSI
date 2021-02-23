@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Micropractica1';
+  title = 'COMANDA';
 
   public lineas=['Esto es una linea prueba'];
   

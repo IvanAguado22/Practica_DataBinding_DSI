@@ -1,4 +1,4 @@
-
+<body>
 <div style="text-align:center">
   <h1>
     {{ title }}
@@ -6,21 +6,27 @@
 </div>
 
 <div class="main">
-    <label>Consumicion</label>
-    <select name="comanda" id="">
+    <label>Consumición:</label>
+    <select name="comanda" id="comanda">
         <option value="" selected>Elige una opción</option>
         <option value="Cerdo">Cerdo agridulce</option>
         <option value="Arroz">Arroz tres delicias</option>
         <option value="Ternera">Ternera con bambu y setas</option>
     </select>
-    <button type='button' (click)='addLinea()'>+</button>
+    <button id="button" type='button' (click)='addLinea()'>+</button>
 </div>
 <br>
 <div class="pedido">
     <h1>Consumiciones</h1>
+    <div class="titulos">
+    <h3><u>Producto</u></h3>
+    <h3 class="precio"><u>Precio</u></h3>
+    </div>
     <p *ngFor='let linea of lineas; let i=index'>
-        <button type='button' (click)='delLinea(i)'>DEL</button>
+        <button type='button' (click)='delLinea(i)'>-</button>
         {{linea}}
     </p>
+    <h2>TOTAL</h2>
 </div>
 <router-outlet></router-outlet>
+</body>
