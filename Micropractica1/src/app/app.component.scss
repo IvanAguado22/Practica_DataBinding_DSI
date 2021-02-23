@@ -1,3 +1,17 @@
-label{width:150px;display:inline-block;}
-input{width:300px}
-select{width:320px}
+label{display:inline-block;}
+body{
+    background-color: rgb(240, 125, 83);
+}
+#comanda{
+    margin-left: 10px}
+#button{
+    margin-left: 5px;
+}
+.precio{
+    margin-left: auto;
+}
+
+.titulos{
+    display: flex; 
+    flex-direction: row;
+}

@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Micropractica1';
+  title = 'COMANDA';
 
   public lineas=[''];
   public cod_comand = 0;
