@@ -8,33 +8,30 @@
   <div class="main">
     <label>Consumición:</label>
     <select name="comanda" id="comanda" [(ngModel)]='cod_comand'>
-        <option *ngFor='let comanda of comanda' [value]='comanda[1]'>{{comanda[0]}}</option>
+        <option *ngFor='let comanda of comanda' [value]='comanda[1]'>{{comanda[0]}} ({{comanda[1] | currency:'EUR':'symbol':'1.0-1':'es'}})</option>
     </select>
-    <button id="button1" type='button' *ngIf="cod_comand==5.5" (click)='addLinea(0)'>+</button>
-    <button id="button2" type='button' *ngIf="cod_comand==3.5" (click)='addLinea(1)'>+</button>
-    <button id="button3" type='button' *ngIf="cod_comand==7" (click)='addLinea(2)'>+</button>
+    <button type='button' *ngIf="cod_comand==5.5" (click)='addLinea(0)'>+</button>
+    <button type='button' *ngIf="cod_comand==3.5" (click)='addLinea(1)'>+</button>
+    <button type='button' *ngIf="cod_comand==7" (click)='addLinea(2)'>+</button>
   </div>
-  <br>
 
   <div>
       <h1>Consumiciones</h1>
-      <div class="titulos">
-        <div>
-          <h3><u>Producto</u></h3>
+      <div class="container">
+        <div class="producto">
+          <label><u>Producto</u></label>
           <p *ngFor='let linea of lineas; let i=index'>
-            {{linea[0]}}
+            {{linea[0]}}</p>
+            <h2>TOTAL</h2>
         </div>
         <div class="precio">
-          <h3 ><u>Precio</u></h3>
+          <label><u>Precio</u></label>
           <p *ngFor='let linea of lineas; let i=index'>
-            {{linea[1]}}
-          <button type='button' (click)='delLinea(i)'>-</button>
+            {{linea[1] | currency:'EUR':'symbol':'1.0-1':'es'}}
+            <button type='button' (click)='delLinea(i)'>-</button>
           </p>
+          <p><b>{{total | currency:'EUR':'symbol':'1.0-1':'es' }}</b></p>
         </div>
       </div>
-      <h2>TOTAL</h2>
-      <p>
-        {{total | currency:'EUR':'symbol':'2.2-2':'es' }}
-      </p>
   </div>
 </body>

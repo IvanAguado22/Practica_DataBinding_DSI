@@ -1,30 +1,52 @@
 body{
-    background-color: rgb(240, 125, 83);
+  background-color: rgb(240, 125, 83);
+  padding: 10px;
 }
 p{
   font-size: 20px;
-}
-h3{
-  font-size: 25px;
+  margin: 10px 0;
 }
 h1{
   font-size: 30px;
 }
 label{
   font-size: 20px;
-  display: inline-block;
 }
-#comanda{
-    margin-left: 10px}
-#button{
-    margin-left: 5px;
+select{
+  width: 350px;
+  margin-left: 10px
 }
-.precio{
-    margin-left: auto;
-    margin-right: 30px;
+option{
+  font-size: 15px;
+}
+button{
+  margin-left: 10px;
 }
 
-.titulos{
+.boton{
+  margin-right: auto;
+}
+.container{
     display: flex; 
     flex-direction: row;
+}
+.producto{
+  flex: 85%;
+}
+
+.precio{
+  flex: 15%;
+}
+
+.precio p{
+  margin-right: 20px;
+}
+
+.precio p button{
+  text-align: right;
+}
+
+.container h2{
+  margin: 0px;
+  flex: 90%;
 }
