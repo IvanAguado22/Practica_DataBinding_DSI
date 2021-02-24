@@ -1,52 +1,38 @@
+$primary-color: rgb(240, 125, 83);
+$tamletra:20px;
+
 body{
-  background-color: rgb(240, 125, 83);
+  background-color: $primary-color;
   padding: 10px;
 }
+
 p{
-  font-size: 20px;
+  font-size: $tamletra;
   margin: 10px 0;
 }
-h1{
-  font-size: 30px;
-}
+
 label{
-  font-size: 20px;
+  font-size: $tamletra;
 }
+
 select{
   width: 350px;
   margin-left: 10px
 }
-option{
-  font-size: 15px;
-}
+
 button{
   margin-left: 10px;
 }
 
-.boton{
-  margin-right: auto;
-}
 .container{
-    display: flex; 
-    flex-direction: row;
+  display: flex; 
+  flex-direction: row;
 }
+
 .producto{
   flex: 85%;
 }
 
 .precio{
   flex: 15%;
-}
-
-.precio p{
-  margin-right: 20px;
-}
-
-.precio p button{
-  text-align: right;
-}
-
-.container h2{
-  margin: 0px;
-  flex: 90%;
 }

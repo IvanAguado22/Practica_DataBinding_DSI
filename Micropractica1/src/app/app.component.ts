@@ -16,17 +16,17 @@ export class AppComponent {
 
   public addLinea(i: number)
   {
-	  this.lineas.push(this.comanda[i]);
+    this.lineas.push(this.comanda[i]);
     this.aux = this.comanda[i][1];
     this.total += this.aux;
-
   }
   
   public delLinea(i: number)
   {
     this.restaTotal(i);
-	  this.lineas.splice(i,1);
+    this.lineas.splice(i,1);
   }
+
   public restaTotal(i: number){
     if (this.lineas[i][1] == 5.5){
       this.total -= 5.5;
